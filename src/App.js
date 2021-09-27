@@ -1,11 +1,19 @@
+import "./App.css";
+import { Graph } from "react-d3-graph";
+import Editor from "./Components/Editor";
+import { useState } from "react";
 
-import './App.css';
 
 function App() {
+
+  const [html,setHtml]=useState('')
   return (
-    <div className="App">
-      Home
-    </div>
+    <>
+      <div className="pane top-pane">
+        <Editor language="xml" displayName="HTML" value={html} onChange={setHtml}/>
+        <Editor />
+      </div>
+    </>
   );
 }
 
